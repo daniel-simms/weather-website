@@ -6,9 +6,10 @@ const messageTwo = document.querySelector("#message-2");
 weatherForm.addEventListener("submit", e => {
   e.preventDefault();
 
-  const location = search.value;
+  const location = search.value.toLowerCase();
+  search.value = "";
 
-  if (location === "colindale") {
+  if (location === "nw9 6rx" || location === "nw96rx") {
     messageOne.textContent = "Home of a queen...";
   } else {
     messageOne.textContent = "Fetching...";
